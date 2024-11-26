@@ -14,6 +14,12 @@ public class FitpeoUIAutomation {
 	private static WebDriver driver;
 	private static Actions action;
 	
+	/**
+	 * main method to start application
+	 * 
+	 * @param args
+	 * @throws InterruptedException
+	 */
 	public static void main(String[] args) throws InterruptedException {
 		
 		initialize();
@@ -57,6 +63,10 @@ public class FitpeoUIAutomation {
 
 	}
 	
+	/**
+	 * method to initialize driver
+	 * 
+	 */
 	private static void initialize() {
 		driver =  new ChromeDriver();
 		action = new Actions(driver);
@@ -64,6 +74,12 @@ public class FitpeoUIAutomation {
 		driver.manage().window().maximize();
 	}
 	
+	/**
+	 * method to tick check-box based on x path
+	 * 
+	 * @param xPath
+	 * @throws InterruptedException
+	 */
 	private static void tickCheckBoxByXPath(String xPath) throws InterruptedException {
 		try {
 			WebElement checkbox = driver
